@@ -51,46 +51,82 @@
       color: #000;
     }
 
-    .price-list, .hours, .gallery, .map {
-      margin: 3rem auto;
-      max-width: 600px;
+    .section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .price-list {
       background-color: #111;
       border-radius: 10px;
       padding: 2rem;
       box-shadow: 0 0 20px rgba(255,255,255,0.05);
-      text-align: right;
+      margin-bottom: 2rem;
     }
 
-    .price-list h2, .hours h2, .gallery h2, .map h2 {
+    .price-list h2,
+    .info-section h2,
+    .gallery h2 {
+      margin-bottom: 1rem;
       font-size: 1.5rem;
       border-bottom: 1px solid #444;
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
     }
 
-    .price-list ul, .hours ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
 
-    .price-list li, .hours li {
-      margin: 0.7rem 0;
+    th, td {
+      border: 2px solid #fff;
+      padding: 1rem;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    thead {
+      background-color: #222;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #111;
+    }
+
+    tbody tr:hover {
+      background-color: #333;
+      transition: 0.3s;
+    }
+
+    .info-section p {
+      margin: 0.5rem 0;
       font-size: 1.1rem;
       color: #ccc;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 1rem;
     }
 
     iframe {
       width: 100%;
       height: 300px;
       border: none;
+      margin-top: 1rem;
       border-radius: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #333;
     }
 
     footer {
@@ -109,37 +145,46 @@
     <a class="btn" href="https://wa.me/972522995527" target="_blank">קבע תור עכשיו</a>
   </header>
 
-  <section class="price-list">
+  <section class="section price-list">
     <h2>מחירון</h2>
-    <ul>
-      <li>50 ₪ — תספורת</li>
-      <li>60 ₪ — תספורת + זקן מלא</li>
-      <li>70 ₪ — תספורת + זקן מלא + צבע</li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>שירות</th>
+          <th>מחיר</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>✂️ תספורת</td>
+          <td>50 ₪</td>
+        </tr>
+        <tr>
+          <td>✂️ תספורת + זקן מלא</td>
+          <td>60 ₪</td>
+        </tr>
+        <tr>
+          <td>✂️ תספורת + זקן מלא + צבע</td>
+          <td>70 ₪</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <section class="hours">
-    <h2>שעות פעילות</h2>
-    <ul>
-      <li>ראשון – חמישי: 9:00–18:00</li>
-      <li>שישי – שבת: סגור</li>
-    </ul>
-  </section>
+  <section class="section info-section">
+    <h2>יצירת קשר</h2>
+    <p>📍 כתובת: שדרות השופטים, קריית גת</p>
+    <p>🕘 שעות פעילות: ראשון – חמישי, 9:00–18:00</p>
 
-  <section class="gallery">
-    <h2>גלריה</h2>
-    <p>התמונות יעלו בקרוב...</p>
-    <!-- תוכל להוסיף תמונות כך:
-    <img src="gallery1.jpg" alt="תספורת לדוגמה">
-    -->
-  </section>
-
-  <section class="map">
-    <h2>איך להגיע?</h2>
     <iframe 
-      src="https://www.google.com/maps?q=שדרות+השופטים,+קרית+גת&output=embed"
-      allowfullscreen>
+      src="https://www.google.com/maps?q=שדרות+השופטים,+קריית+גת&output=embed"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
+  </section>
+
+  <section class="section gallery">
+    <h2>גלריה</h2>
+    <p style="color:#888;">תמונות יופיעו כאן לאחר שתשלח אותן 📸</p>
   </section>
 
   <footer>
